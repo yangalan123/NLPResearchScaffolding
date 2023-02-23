@@ -15,8 +15,9 @@ conda install pytorch torchvision torchaudio pytorch-cuda=11.7 -c pytorch -c nvi
 conda install transformers datasets evaluate
 # large language model related utils, st=sentencepiece is useful for tokenizer loading
 conda install sentencepiece
-# cannot use conda
-pip install protobuf accelerate
+# cannot use conda, protobuf is set to be 3.20 as it is more compatible with released LLM so far
+pip install protobuf==3.20
+pip install accelerate
 # setup huggingface cache dir
 echo "export HF_HOME=${project_dir}/transformers" >> ~/.bashrc
 echo "export TRANSFORMERS_CACHE=${project_dir}/transformers" >> ~/.bashrc
