@@ -1,5 +1,6 @@
 # NLPResearchScaffolding
 Scaffold for NLP researcher to quickly set up the codebase
+
 Author: Chenghao Yang (chenghao at uchicago dot edu)
 
 ## Usage
