@@ -15,6 +15,7 @@ Then just run the `run.sh` shell scripts and you will get the environment setup.
 1. Huggingface Suites (Transformers, Datasets, Evaluate, Accelerate)
 1. Large Language Models stuffs (Protobuf, SentencePiece)
 1. Logging Library (loguru) and Vim Setup from [Ultimate Vimrc](https://github.com/amix/vimrc). 
+1. Metrics (Rouge-score)
 
 ## TO-DOs
 1. Tries to provide some interface to easilly select which toolkit we want to install.

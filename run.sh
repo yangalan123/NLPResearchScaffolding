@@ -32,6 +32,9 @@ python -m spacy download en_core_web_sm
 # scipy, sklearn..
 conda install scipy scikit-learn
 
+# install rouge for summary evaluation
+pip install rouge-score
+
 # setup vim
 cd ~/
 wget https://raw.githubusercontent.com/amix/vimrc/master/vimrcs/basic.vim
