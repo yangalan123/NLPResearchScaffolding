@@ -1,0 +1,17 @@
+# recommended under python 3.10
+torch
+pytorch_lightning
+scikit-learn
+transformers
+mpi4py # if you cannot install by pip, use conda install
+deepspeed
+accelerate
+peft
+vllm
+sentencepiece
+datasets
+nltk
+metrics
+wandb
+loguru
+protobuf==3.20

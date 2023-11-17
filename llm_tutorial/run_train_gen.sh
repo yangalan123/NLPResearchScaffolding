@@ -1,0 +1,17 @@
+deepspeed demo_trainer.py \
+    --model_name_or_path "/data/LLAMA2_hf/llama_13B" \
+    --deepspeed ./ds_config_zero2.json \
+    --bf16 \
+    --do_train \
+    --do_eval \
+    --do_predict \
+    --mode "generation" \
+    --dataset_name cnn_dailymail \
+    --dataset_config "3.0.0" \
+    --text_column "article" \
+    --reference_column "highlights" \
+    --source_prefix "summarize: " \
+    --output_dir ./output/cnn_dm \
+    --per_device_train_batch_size 4 \
+    --per_device_eval_batch_size 4 \
+    --overwrite_output_dir
