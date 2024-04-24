@@ -149,6 +149,22 @@ class DataArguments:
             )
         },
     )
+    max_train_samples: Optional[int] = field(
+        default=100,
+        metadata={
+            "help": (
+                "max number of training samples being used"
+            )
+        },
+    )
+    max_eval_samples: Optional[int] = field(
+        default=100,
+        metadata={
+            "help": (
+                "max number of evaluation samples being used"
+            )
+        },
+    )
 
     def __post_init__(self):
         if self.train_file is None or self.validation_file is None:
