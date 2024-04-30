@@ -233,8 +233,11 @@ if __name__ == '__main__':
     logger.warning(f"Script parameters {script_args}")
     logger.warning(f"Data parameters {data_args}")
 
-    # Step-0: create tokenizer (strings -> token ids)
-    tokenizer = AutoTokenizer.from_pretrained(script_args.model_name_or_path)
+    # Step-0: create config, and tokenizer (strings -> token ids)
+    model_config = AutoConfig.from_pretrained(script_args.model_name_or_path)
+    padding_side = "left" if model_config.is_decoder else "right"
+
+    tokenizer = AutoTokenizer.from_pretrained(script_args.model_name_or_path, padding_side=padding_side)
     # for llama specifically
     if "llama" in script_args.model_name_or_path:
         tokenizer.pad_token = tokenizer.eos_token
