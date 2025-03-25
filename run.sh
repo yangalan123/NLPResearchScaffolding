@@ -35,10 +35,13 @@ conda install scipy scikit-learn
 # install rouge for summary evaluation
 pip install rouge-score
 
-# setup vim
+# setup vim (optional)
 cd ~/
 wget https://raw.githubusercontent.com/amix/vimrc/master/vimrcs/basic.vim
 mv basic.vim .vimrc
+
+# let git use vim (optional)
+git config --global core.editor "vim"
 
 
 # setup openai interface for using GPT-3/3.5/...
